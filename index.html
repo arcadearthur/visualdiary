@@ -1,91 +1,111 @@
-/* visual portfolio */
-
-/// responsive
-
-/// header slider
-
-/// grid 0f 9 images
-
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 body 
-  { 
+  {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
 }
 
 .header 
   {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 20px 10px;
-}
-
-.header a 
-  {
-  float: left;
-  color: black;
   text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
-  line-height: 25px;
-  border-radius: 4px;
+  padding: 32px;
 }
 
-.header a.logo 
+.row 
   {
-  font-size: 25px;
-  font-weight: bold;
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
-.header a:hover 
+/* Create three equal columns that sits next to each other */
+.column 
   {
-  background-color: #ddd;
-  color: black;
+  -ms-flex: 33%; /* IE10 */
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
 }
 
-.header a.active 
+.column img 
   {
-  background-color: dodgerblue;
-  color: white;
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
 }
 
-.header-right {
-  float: right;
-}
-
-@media screen and (max-width: 500px) 
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) 
   {
-  .header a 
-    {
-    float: none;
-    display: block;
-    text-align: left;
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
   }
-  
-  .header-right {
-    float: none;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
   }
 }
 </style>
-</head>
 <body>
 
+<!-- Header -->
 <div class="header">
-  <a href="#default" class="logo">CompanyLogo</a>
-  <div class="header-right">
-    <a class="active" href="#home">Home</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-  </div>
+  <h1>Responsive Image Grid</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
 </div>
 
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="/w3images/wedding.jpg" style="width:100%">
+    <img src="/w3images/rocks.jpg" style="width:100%">
+    <img src="/w3images/falls2.jpg" style="width:100%">
+    <img src="/w3images/paris.jpg" style="width:100%">
+    <img src="/w3images/nature.jpg" style="width:100%">
+    <img src="/w3images/mist.jpg" style="width:100%">
+    <img src="/w3images/paris.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/w3images/underwater.jpg" style="width:100%">
+    <img src="/w3images/ocean.jpg" style="width:100%">
+    <img src="/w3images/wedding.jpg" style="width:100%">
+    <img src="/w3images/mountainskies.jpg" style="width:100%">
+    <img src="/w3images/rocks.jpg" style="width:100%">
+    <img src="/w3images/underwater.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="/w3images/wedding.jpg" style="width:100%">
+    <img src="/w3images/rocks.jpg" style="width:100%">
+    <img src="/w3images/falls2.jpg" style="width:100%">
+    <img src="/w3images/paris.jpg" style="width:100%">
+    <img src="/w3images/nature.jpg" style="width:100%">
+    <img src="/w3images/mist.jpg" style="width:100%">
+    <img src="/w3images/paris.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/w3images/underwater.jpg" style="width:100%">
+    <img src="/w3images/ocean.jpg" style="width:100%">
+    <img src="/w3images/wedding.jpg" style="width:100%">
+    <img src="/w3images/mountainskies.jpg" style="width:100%">
+    <img src="/w3images/rocks.jpg" style="width:100%">
+    <img src="/w3images/underwater.jpg" style="width:100%">
+  </div>
+</div>
 
 </body>
 </html>

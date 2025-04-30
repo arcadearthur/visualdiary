@@ -70,11 +70,12 @@ body
   -ms-flex: 33.33%; /* IE10 */
   flex: 33.33%;
   max-width: 33.33%;
-  padding: 0 4px;
+  padding: 0 10px;
 }
 
 .column img 
   {
+  filter: grayscale(100%);
   margin-top: 8px;
   vertical-align: middle;
   width: 50%; /* test down from 100 */
@@ -98,7 +99,6 @@ body
 
 .container 
   {
-  filter: grayscale(100%);
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -106,7 +106,6 @@ body
   
 .container:hover .overlay 
   {
-  filter: grayscale(0%);
   opacity: 1;
 }
   
